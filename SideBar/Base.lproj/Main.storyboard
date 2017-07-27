@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SideBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6v-WO-T3t">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Side Bar" id="iAB-eu-sDq">
+                                        <barButtonItem key="leftBarButtonItem" image="Menu" id="JVv-gZ-92o">
+                                            <connections>
+                                                <action selector="toggleSideBar:" destination="BYZ-38-t0r" id="FQd-il-AtF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="Search" id="SLx-nE-0aT"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1J-lV-vs0" userLabel="CloseView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vq-vK-1Dr" userLabel="Close">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <connections>
+                                            <action selector="closeSegmentTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2x-Op-Ofy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14709974315068494" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0vq-vK-1Dr" firstAttribute="leading" secondItem="D1J-lV-vs0" secondAttribute="leading" id="Eri-Te-q1Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="0vq-vK-1Dr" secondAttribute="trailing" id="GGp-SX-sGH"/>
+                                    <constraint firstItem="0vq-vK-1Dr" firstAttribute="top" secondItem="D1J-lV-vs0" secondAttribute="top" id="HmQ-5x-Skl"/>
+                                    <constraint firstAttribute="bottom" secondItem="0vq-vK-1Dr" secondAttribute="bottom" id="KV4-h5-tZk"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sbN-dS-WNb" userLabel="SideBar">
+                                <rect key="frame" x="0.0" y="0.0" width="83" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BubbleMenu" translatesAutoresizingMaskIntoConstraints="NO" id="rA0-BM-LVt">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="8Om-wy-JFL">
+                                        <rect key="frame" x="19" y="26" width="45" height="615"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCR-nG-Bip" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                <state key="normal" image="Home"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93e-DC-yY5" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="95" width="45" height="45"/>
+                                                <state key="normal" image="Hot"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-cN-Kv2" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="190" width="45" height="45"/>
+                                                <state key="normal" image="Message"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FU3-r9-Dy6" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="285" width="45" height="45"/>
+                                                <state key="normal" image="Notification"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLQ-Bt-xFd" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="380" width="45" height="45"/>
+                                                <state key="normal" image="Star"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvE-kQ-E0X" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="475" width="45" height="45"/>
+                                                <state key="normal" image="Settings"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcA-58-JYQ" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="570" width="45" height="45"/>
+                                                <state key="normal" image="User"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" red="0.36583004769999999" green="0.1968853807" blue="0.74075983499999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C6v-WO-T3t" secondAttribute="trailing" id="IlN-4L-DW6"/>
+                            <constraint firstItem="D1J-lV-vs0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="InW-ld-KHS"/>
+                            <constraint firstItem="D1J-lV-vs0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="TPb-g9-xuo"/>
+                            <constraint firstItem="D1J-lV-vs0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="alG-BT-52u"/>
+                            <constraint firstItem="C6v-WO-T3t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jah-Ui-DFo"/>
+                            <constraint firstItem="C6v-WO-T3t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rJx-gv-GxQ"/>
+                            <constraint firstAttribute="trailing" secondItem="D1J-lV-vs0" secondAttribute="trailing" id="t41-Xg-euq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bubbleMenuImage" destination="rA0-BM-LVt" id="xrf-dE-cfa"/>
+                        <outlet property="closeView" destination="D1J-lV-vs0" id="pWu-kT-VXb"/>
+                        <outlet property="favoritesButton" destination="DLQ-Bt-xFd" id="LmC-sX-M99"/>
+                        <outlet property="homeButton" destination="cCR-nG-Bip" id="zw9-oh-IJn"/>
+                        <outlet property="hotButton" destination="93e-DC-yY5" id="wbS-6A-lZ1"/>
+                        <outlet property="messagesButton" destination="9Vq-cN-Kv2" id="HhF-BT-6wz"/>
+                        <outlet property="notificationsButton" destination="FU3-r9-Dy6" id="rAY-ji-gUW"/>
+                        <outlet property="profileButton" destination="fcA-58-JYQ" id="vac-1z-UaG"/>
+                        <outlet property="settingsButton" destination="XvE-kQ-E0X" id="f6r-nt-7OH"/>
+                        <outlet property="sideBar" destination="sbN-dS-WNb" id="F1I-cX-quL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="43.628185907046479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BubbleMenu" width="80" height="400"/>
+        <image name="Home" width="45" height="45"/>
+        <image name="Hot" width="45" height="45"/>
+        <image name="Menu" width="15" height="15"/>
+        <image name="Message" width="45" height="45"/>
+        <image name="Notification" width="45" height="45"/>
+        <image name="Search" width="15" height="15"/>
+        <image name="Settings" width="45" height="45"/>
+        <image name="Star" width="45" height="45"/>
+        <image name="User" width="45" height="45"/>
+    </resources>
+</document>
